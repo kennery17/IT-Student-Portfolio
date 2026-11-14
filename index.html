@@ -1,72 +1,76 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>URBAN THREAD | Streetwear</title>
-<style>
-:root{--bg:#101010;--panel:#191919;--panel2:#222;--ink:#f5f2ec;--muted:#aaa49b;--accent:#d7ff3f;--line:#343434}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(circle at 90% 0%,#353d1b 0,transparent 28%),linear-gradient(140deg,#0c0c0c,#171717 60%,#101010);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
-header{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:18px 7%;background:#101010eF;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
-.logo{font-weight:1000;letter-spacing:3px;font-size:1.18rem}.logo span{color:var(--accent)}
-nav{display:flex;align-items:center;gap:22px}nav a{color:var(--muted);text-decoration:none;font-size:.9rem}nav a:hover{color:var(--accent)}
-.cart{border:0;background:var(--accent);color:#111;padding:10px 15px;border-radius:3px;font-weight:900;cursor:pointer}
-.hero{max-width:1200px;margin:auto;padding:72px 7% 60px;display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
-.kicker{color:var(--accent);font-size:.74rem;font-weight:900;letter-spacing:3px;text-transform:uppercase}
-h1{font-size:clamp(3rem,7vw,6.1rem);line-height:.9;letter-spacing:-3px;margin:20px 0;text-transform:uppercase}h1 span{color:var(--accent)}
-.hero p{max-width:500px;color:var(--muted);line-height:1.75}
-.cta{display:inline-block;margin-top:16px;padding:14px 20px;background:var(--accent);color:#111;text-decoration:none;font-weight:900;text-transform:uppercase;letter-spacing:1px;border-radius:3px}
-.hero-art{min-height:360px;border:1px solid #41432c;display:grid;place-items:center;position:relative;overflow:hidden;background:linear-gradient(145deg,#333a20,#171914 65%,#252525)}
-.hero-art:before{content:"";position:absolute;width:290px;height:290px;border:1px solid #d7ff3f44;border-radius:50%}.hero-art:after{content:"";position:absolute;width:220px;height:220px;border:1px solid #d7ff3f33;border-radius:50%}
-.hero-emoji{z-index:1;font-size:clamp(7rem,15vw,11rem);filter:drop-shadow(0 18px 16px #0008);transform:rotate(-8deg)}
-.hero-stamp{position:absolute;right:18px;bottom:18px;color:var(--accent);font-size:.7rem;letter-spacing:2px;font-weight:900}
-.section{max-width:1200px;margin:auto;padding:20px 7% 70px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:25px}
-h2{font-size:clamp(1.8rem,4vw,2.7rem);margin:8px 0}.section-head p{color:var(--muted);margin:0}
-.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
-input,select{background:#1a1a1a;color:var(--ink);border:1px solid var(--line);border-radius:3px;padding:12px 14px;outline:none}input{flex:1;min-width:190px}select{min-width:155px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
-.product{background:linear-gradient(150deg,#202020,#151515);border:1px solid var(--line);padding:13px;transition:transform .2s,border-color .2s}
-.product:hover{transform:translateY(-4px);border-color:#d7ff3f88}
-.product-art{height:175px;display:grid;place-items:center;background:linear-gradient(145deg,#30352a,#1d1d1d);font-size:4.8rem;margin-bottom:15px}
-.tag{color:var(--accent);font-size:.7rem;font-weight:900;letter-spacing:2px;text-transform:uppercase}
-h3{margin:8px 0;font-size:1.05rem}.desc{min-height:42px;color:var(--muted);font-size:.87rem;line-height:1.5}
-.bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:15px}.price{font-size:1.1rem;font-weight:900}
-.add{border:0;background:var(--accent);color:#111;padding:10px 11px;font-weight:900;cursor:pointer;border-radius:2px}
-.empty{grid-column:1/-1;padding:28px;text-align:center;border:1px dashed var(--line);color:var(--muted)}
-.info{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}.info div{border:1px solid var(--line);padding:18px;background:#171717}
-.info strong{display:block;color:var(--accent);margin-bottom:8px}.info span{color:var(--muted);font-size:.88rem;line-height:1.55}
-footer{text-align:center;border-top:1px solid var(--line);padding:25px 7%;font-size:.84rem;color:var(--muted)}
-.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);display:none;background:var(--accent);color:#111;padding:12px 18px;font-weight:900;z-index:10;border-radius:3px}
-@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:45px}.hero-art{min-height:270px}.grid{grid-template-columns:repeat(2,1fr)}nav a{display:none}}
-@media(max-width:520px){.grid,.info{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}header{padding:15px 5%}.hero,.section{padding-left:5%;padding-right:5%}h1{letter-spacing:-1.5px}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #243b55;
+        }
+
+        .info {
+            padding: 12px;
+            margin: 10px 0;
+            background: #f4f6f9;
+            border-radius: 6px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #243b55;
+        }
+    </style>
 </head>
+
 <body>
-<header><div class="logo">URBAN <span>THREAD</span></div><nav><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><button class="cart" id="cartButton">BAG: <span id="cartCount">0</span></button></nav></header>
-<main>
-<section class="hero" id="home">
-<div><div class="kicker">Streetwear essentials / Drop 001</div><h1>OWN YOUR<br><span>STREET.</span></h1><p>Oversized fits, everyday layers, and clean street style. Build your look with affordable pieces made for your own vibe.</p><a class="cta" href="#shop">Shop the drop ↓</a></div>
-<div class="hero-art"><div class="hero-emoji">👕</div><div class="hero-stamp">NO RULES. JUST STYLE.</div></div>
-</section>
-<section class="section" id="shop">
-<div class="section-head"><div><div class="kicker">The latest drop</div><h2>Streetwear, your way.</h2><p>Everyday pieces. Bold energy. Easy prices.</p></div><div class="kicker" id="productCount">Loading…</div></div>
-<div class="tools"><input id="searchInput" type="search" placeholder="Search streetwear..." aria-label="Search streetwear"><select id="categoryFilter" aria-label="Filter by category"><option value="all">All styles</option></select></div>
-<div class="grid" id="productGrid"><div class="empty">Loading products.csv…</div></div>
-<div class="info" id="about"><div><strong>01 / STREET STYLE</strong><span>Oversized tees, hoodies, cargos, and relaxed everyday fits.</span></div><div><strong>02 / CSV DATA</strong><span>Product details are read from a separate CSV file, including quoted descriptions with commas.</span></div><div><strong>03 / EASY EDITS</strong><span>Add or change items in products.csv without redesigning the website.</span></div></div>
-</section>
-</main>
-<footer>© 2026 URBAN THREAD — Student streetwear shop demo using CSV integration.</footer><div class="toast" id="toast"></div>
-<script>
-function parseCSVLine(line){const out=[];let value="",quoted=false;for(let i=0;i<line.length;i++){const c=line[i];if(c==='"'){if(quoted&&line[i+1]==='"'){value+='"';i++;}else quoted=!quoted;}else if(c===","&&!quoted){out.push(value.trim());value="";}else value+=c;}out.push(value.trim());return out;}
-function parseCSV(text){const lines=text.trim().split(/\r?\n/).filter(x=>x.trim());if(lines.length<2)return [];const headers=parseCSVLine(lines[0]).map(x=>x.toLowerCase());return lines.slice(1).map(line=>{const row={};parseCSVLine(line).forEach((v,i)=>row[headers[i]]=v);return row;});}
-const icons={Tops:"👕",Hoodies:"🧥",Bottoms:"👖",Outerwear:"🧥",Accessories:"🧢"};
-let products=[],cartCount=0;const grid=document.getElementById("productGrid"),search=document.getElementById("searchInput"),filter=document.getElementById("categoryFilter"),count=document.getElementById("productCount");
-function esc(v){return String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
-function render(){const q=search.value.toLowerCase().trim(),cat=filter.value;const shown=products.filter(p=>`${p.name} ${p.category} ${p.description}`.toLowerCase().includes(q)&&(cat==="all"||p.category===cat));count.textContent=`${shown.length} STYLE${shown.length===1?"":"S"}`;if(!shown.length){grid.innerHTML='<div class="empty">No styles found. Try another search.</div>';return;}grid.innerHTML=shown.map(p=>`<article class="product"><div class="product-art">${icons[p.category]||"🛍️"}</div><div class="tag">${esc(p.category)}</div><h3>${esc(p.name)}</h3><div class="desc">${esc(p.description)}</div><div class="bottom"><div class="price">₱${Number(p.price).toLocaleString("en-PH")}</div><button class="add" data-name="${esc(p.name)}">Add to bag +</button></div></article>`).join("");grid.querySelectorAll(".add").forEach(b=>b.addEventListener("click",()=>{cartCount++;document.getElementById("cartCount").textContent=cartCount;toast(`${b.dataset.name} added to your bag!`);}));}
-function toast(s){const t=document.getElementById("toast");t.textContent=s;t.style.display="block";clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>t.style.display="none",2200);}
-async function load(){try{const r=await fetch("products.csv");if(!r.ok)throw Error("products.csv missing");products=parseCSV(await r.text());[...new Set(products.map(p=>p.category).filter(Boolean))].forEach(c=>{const o=document.createElement("option");o.value=c;o.textContent=c;filter.appendChild(o);});render();}catch(e){grid.innerHTML='<div class="empty">Cannot load products.csv. Open index.html with VS Code Live Server and keep both files in the same folder.</div>';count.textContent="CSV ERROR";console.error(e);}}
-search.addEventListener("input",render);filter.addEventListener("change",render);document.getElementById("cartButton").addEventListener("click",()=>toast(`Your bag has ${cartCount} item${cartCount===1?"":"s"}.`));load();
-</script>
+
+    <div class="container">
+        <h1>Student Information</h1>
+
+        <div class="info">
+            <span class="label">Name:</span> John Kennery Arteta
+        </div>
+
+        <div class="info">
+            <span class="label">Age:</span> 21
+        </div>
+
+        <div class="info">
+            <span class="label">Course:</span> BS Information Technology
+        </div>
+
+        <div class="info">
+            <span class="label">Year Level:</span> 3rd Year
+        </div>
+
+        <div class="info">
+            <span class="label">Department:</span> Information Technology
+        </div>
+
+        <div class="info">
+            <span class="label">Skills:</span> HTML, CSS, Basic Python
+        </div>
+    </div>
+
 </body>
 </html>
