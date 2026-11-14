@@ -1,11 +1,207 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Student Information</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>John Kennery Arteta | Student Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: #e5e7eb;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.profile {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #172554, #1e40af);
+    border-radius: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: 18px;
+}
+
+.profile h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.profile p {
+    color: #dbeafe;
+    font-size: 16px;
+}
+
+.card {
+    background: #151f32;
+    padding: 28px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #263550;
+}
+
+.card h2 {
+    color: #60a5fa;
+    margin-bottom: 20px;
+    font-size: 21px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 13px 5px;
+    border-bottom: 1px solid #29364b;
+}
+
+.info:last-child {
+    border-bottom: none;
+}
+
+.info strong {
+    color: #93c5fd;
+}
+
+.about {
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background: #1e3a8a;
+    color: #dbeafe;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    color: #64748b;
+    padding: 20px;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .profile h1 {
+        font-size: 24px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .info {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+</style>
 </head>
+
 <body>
-    <h1>My Student Portfolio</h1>
-    <h2>About Me</h2>
-    <p>Hello! I am an IT student.</p>
+
+<div class="container">
+
+    <header class="profile">
+        <img src="profile.jpg" alt="John Kennery Arteta">
+        <h1>John Kennery Arteta</h1>
+        <p>BS Information Technology | 3rd Year Student</p>
+    </header>
+
+    <section class="card">
+        <h2>About Me</h2>
+        <p class="about">
+            Hello! I am John Kennery Arteta, an Information
+            Technology student who is interested in learning
+            programming and developing websites. I enjoy
+            exploring new technologies and improving my
+            skills in the field of IT.
+        </p>
+    </section>
+
+    <section class="card">
+        <h2>Personal Information</h2>
+
+        <div class="info">
+            <strong>Full Name</strong>
+            <span>John Kennery Arteta</span>
+        </div>
+
+        <div class="info">
+            <strong>Age</strong>
+            <span>21</span>
+        </div>
+
+        <div class="info">
+            <strong>Course</strong>
+            <span>BS Information Technology</span>
+        </div>
+
+        <div class="info">
+            <strong>Year Level</strong>
+            <span>3rd Year</span>
+        </div>
+
+        <div class="info">
+            <strong>Department</strong>
+            <span>Information Technology</span>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Technical Skills</h2>
+        <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Basic Python</span>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Hobbies & Interests</h2>
+        <div class="tags">
+            <span class="tag">🏀 Basketball</span>
+            <span class="tag">🎮 Online Gaming</span>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 John Kennery Arteta | Student Portfolio
+    </footer>
+
+</div>
+
 </body>
 </html>
