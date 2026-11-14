@@ -37,3 +37,8 @@ To continuously improve my programming skills and become a skilled IT profession
 
 ---
 *Thank you for visiting my portfolio!*
+## Live Website
+
+Check out my project here:
+
+[URBAN THREAD – Streetwear Website](https://kennery17.github.io/IT-Student-Portfolio/)
