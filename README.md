@@ -1,20 +1,26 @@
 
 # IT STUDENT PORTFOLIO
 
-Welcome to my portfolio! I am John Kennery Arteta, a BS Information Technology student.
+Hi! I am John Kennery Arteta, an Information Technology student.
+
+## About Me
+I am a 3rd Year BS Information Technology student who is learning programming and web development.
+
+## Skills
+- Basic HTML
+- Basic CSS
+- Basic JavaScript
+- Basic Python
 
 ## Projects
 
-### 1. SOLANA GREY CLOTHING
-A modern clothing store website featuring men's and women's fashion, product collections, and a shopping bag.
+### SOLANA GREY CLOTHING
+A simple clothing store website featuring men's and women's fashion.
 
 **Technologies Used:**
 - HTML
 - CSS
 - JavaScript
-
-**Live Website:**
-[Visit SOLANA GREY CLOTHING](https://kennery17.github.io/IT-Student-Portfolio/)
 
 ## Tools
 - Visual Studio Code
@@ -22,7 +28,10 @@ A modern clothing store website featuring men's and women's fashion, product col
 - GitHub
 
 ## Career Goal
-To continuously improve my programming skills and become a skilled IT professional.
+To improve my programming skills and become a professional IT practitioner.
 
 ---
-Thank you for visiting my portfolio!
+
+## Live Website
+
+[Visit SOLANA GREY CLOTHING](https://kennery17.github.io/IT-Student-Portfolio/Student-Information/)
