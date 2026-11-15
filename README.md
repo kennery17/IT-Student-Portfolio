@@ -14,7 +14,7 @@ A modern clothing store website featuring men's and women's fashion, product col
 - JavaScript
 
 **Live Website:**
-[Visit SOLANA GREY CLOTHING](./Student-Information/)
+[Visit SOLANA GREY CLOTHING](https://kennery17.github.io/IT-Student-Portfolio/)
 
 ## Tools
 - Visual Studio Code
