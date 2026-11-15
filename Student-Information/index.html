@@ -4,127 +4,419 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>John Kennery Arteta | Student Portfolio</title>
+<title>SOLANA GREY CLOTHING</title>
 
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #0b1120;
-    color: #e5e7eb;
-    padding: 40px 20px;
+    background: #141414;
+    color: #f5f5f5;
 }
 
-.container {
+header {
+    background: #101010;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.logo-mark {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    color: #fff;
+    border: 1px solid #888;
+    padding: 5px 8px;
+}
+
+.logo-name span {
+    color: #999;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: #999;
+}
+
+.cart-button {
+    background: #eee;
+    color: #111;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hero {
+    min-height: 340px;
+    padding: 65px 8%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+    linear-gradient(90deg, rgba(0,0,0,.92), rgba(0,0,0,.38)),
+    url("https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=1600&q=85");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 500px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-mark {
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: clamp(100px, 19vw, 240px);
+    font-weight: 900;
+    letter-spacing: -15px;
+    color: rgba(255,255,255,.15);
+    line-height: 1;
+    pointer-events: none;
+}
+
+.hero h1 {
+    font-size: 43px;
+    letter-spacing: 4px;
+    margin-bottom: 14px;
+}
+
+.hero p {
+    color: #ccc;
+    line-height: 1.7;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.hero a {
+    display: inline-block;
+    background: #eee;
+    color: #111;
+    padding: 12px 22px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.section {
+    padding: 45px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+.section-heading p {
+    color: #999;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.filters button {
+    background: #222;
+    border: 1px solid #444;
+    color: #ddd;
+    padding: 9px 19px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.filters button.active,
+.filters button:hover {
+    background: #eee;
+    color: #111;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.product-card {
+    background: #1d1d1d;
+    border: 1px solid #303030;
+    overflow: hidden;
+    transition: .25s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: #777;
+}
+
+.product-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    display: block;
+    background: #292929;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.category {
+    color: #999;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+
+.add-button {
+    width: 100%;
+    background: #eee;
+    color: #111;
+    border: none;
+    padding: 11px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.add-button:hover {
+    background: #bbb;
+}
+
+.information {
+    padding: 45px 7%;
+    background:
+    linear-gradient(rgba(15,15,15,.95), rgba(15,15,15,.97)),
+    url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=80");
+    background-size: cover;
+    background-position: center;
+    border-top: 1px solid #333;
+}
+
+.information h2 {
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
     max-width: 850px;
     margin: auto;
 }
 
-.profile {
-    text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(135deg, #172554, #1e40af);
-    border-radius: 20px;
-    margin-bottom: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+.info-box {
+    background: rgba(35,35,35,.85);
+    border: 1px solid #444;
+    padding: 20px;
 }
 
-.profile img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid white;
-    margin-bottom: 18px;
+.info-box h3 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #ccc;
+    margin-bottom: 15px;
 }
 
-.profile h1 {
-    font-size: 30px;
-    margin-bottom: 8px;
+.info-box p {
+    font-size: 13px;
+    color: #ddd;
+    margin: 10px 0;
+    line-height: 1.5;
 }
 
-.profile p {
-    color: #dbeafe;
-    font-size: 16px;
-}
-
-.card {
-    background: #151f32;
-    padding: 28px;
-    border-radius: 16px;
-    margin-bottom: 20px;
-    border: 1px solid #263550;
-}
-
-.card h2 {
-    color: #60a5fa;
-    margin-bottom: 20px;
-    font-size: 21px;
-}
-
-.info {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    padding: 13px 5px;
-    border-bottom: 1px solid #29364b;
-}
-
-.info:last-child {
-    border-bottom: none;
-}
-
-.info strong {
-    color: #93c5fd;
+.info-box strong {
+    color: #fff;
 }
 
 .about {
-    line-height: 1.8;
-    color: #cbd5e1;
-}
-
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.tag {
-    background: #1e3a8a;
-    color: #dbeafe;
-    padding: 10px 16px;
-    border-radius: 20px;
-    font-size: 14px;
+    grid-column: 1 / -1;
 }
 
 footer {
+    background: #0c0c0c;
+    padding: 22px;
     text-align: center;
-    color: #64748b;
-    padding: 20px;
-    font-size: 13px;
+    color: #888;
+    font-size: 11px;
+    letter-spacing: 1px;
+    border-top: 1px solid #333;
 }
 
-@media (max-width: 600px) {
-    body {
-        padding: 20px 12px;
+/* SHOPPING BAG */
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.7);
+    z-index: 20;
+}
+
+.cart-panel {
+    position: fixed;
+    right: -400px;
+    top: 0;
+    width: 350px;
+    max-width: 90%;
+    height: 100%;
+    background: #1b1b1b;
+    z-index: 30;
+    padding: 22px;
+    transition: .3s;
+    overflow-y: auto;
+}
+
+.cart-panel.open {
+    right: 0;
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.cart-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border-bottom: 1px solid #444;
+    padding: 13px 0;
+    font-size: 12px;
+}
+
+.cart-item button {
+    background: none;
+    color: #aaa;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-total {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.checkout {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    background: #eee;
+    color: #111;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media(max-width: 750px) {
+    header {
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
-    .profile h1 {
-        font-size: 24px;
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
     }
 
-    .card {
-        padding: 20px;
+    .products {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .info {
-        flex-direction: column;
-        gap: 5px;
+    .product-card img {
+        height: 220px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+
+@media(max-width: 480px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        grid-column: auto;
     }
 }
 </style>
@@ -132,76 +424,349 @@ footer {
 
 <body>
 
-<div class="container">
+<header>
+    <div class="logo">
+        <div class="logo-mark">SG.</div>
+        <div class="logo-name">SOLANA <span>GREY</span></div>
+    </div>
 
-    <header class="profile">
-        <img src="profile.jpg" alt="John Kennery Arteta">
-        <h1>John Kennery Arteta</h1>
-        <p>BS Information Technology | 3rd Year Student</p>
-    </header>
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#collection">COLLECTION</a>
+        <a href="#information">MY INFORMATION</a>
+    </nav>
 
-    <section class="card">
-        <h2>About Me</h2>
-        <p class="about">
-            Hello! I am John Kennery Arteta, an Information
-            Technology student who is interested in learning
-            programming and developing websites. I enjoy
-            exploring new technologies and improving my
-            skills in the field of IT.
+    <button class="cart-button" onclick="openCart()">
+        BAG (<span id="cart-count">0</span>)
+    </button>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>BEYOND ORDINARY.</h1>
+        <p>
+            Discover everyday fashion with a modern streetwear style.
+            Find your look and express your individuality with
+            SOLANA GREY CLOTHING.
         </p>
-    </section>
+        <a href="#collection">SHOP COLLECTION</a>
+    </div>
+    <div class="hero-mark">SG.</div>
+</section>
 
-    <section class="card">
-        <h2>Personal Information</h2>
+<section class="section" id="collection">
+    <div class="section-heading">
+        <h2>OUR COLLECTION</h2>
+        <p>Modern essentials for every style.</p>
+    </div>
 
-        <div class="info">
-            <strong>Full Name</strong>
-            <span>John Kennery Arteta</span>
+    <div class="filters">
+        <button class="active" onclick="setCategory('all', this)">ALL</button>
+        <button onclick="setCategory('men', this)">MEN</button>
+        <button onclick="setCategory('women', this)">WOMEN</button>
+    </div>
+
+    <div class="products">
+
+        <div class="product-card" data-category="men">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85" alt="Classic Cotton Tee">
+            <div class="product-info">
+                <h3>Classic Cotton Tee</h3>
+                <p class="category">MEN'S COLLECTION</p>
+                <p class="price">₱850</p>
+                <button class="add-button" onclick="addToCart('Classic Cotton Tee',850)">ADD TO BAG</button>
+            </div>
         </div>
 
-        <div class="info">
-            <strong>Age</strong>
-            <span>21</span>
+        <div class="product-card" data-category="women">
+            <img src="https://images.unsplash.com/photo-1551163943-3f6a855d1153?auto=format&fit=crop&w=700&q=85" alt="Everyday Street Top">
+            <div class="product-info">
+                <h3>Everyday Street Top</h3>
+                <p class="category">WOMEN'S COLLECTION</p>
+                <p class="price">₱950</p>
+                <button class="add-button" onclick="addToCart('Everyday Street Top',950)">ADD TO BAG</button>
+            </div>
         </div>
 
-        <div class="info">
-            <strong>Course</strong>
-            <span>BS Information Technology</span>
+        <div class="product-card" data-category="men">
+            <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=700&q=85" alt="Urban Utility Jacket">
+            <div class="product-info">
+                <h3>Urban Utility Jacket</h3>
+                <p class="category">MEN'S COLLECTION</p>
+                <p class="price">₱2,500</p>
+                <button class="add-button" onclick="addToCart('Urban Utility Jacket',2500)">ADD TO BAG</button>
+            </div>
         </div>
 
-        <div class="info">
-            <strong>Year Level</strong>
-            <span>3rd Year</span>
+        <div class="product-card" data-category="women">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85" alt="Modern Everyday Fit">
+            <div class="product-info">
+                <h3>Modern Everyday Fit</h3>
+                <p class="category">WOMEN'S COLLECTION</p>
+                <p class="price">₱1,350</p>
+                <button class="add-button" onclick="addToCart('Modern Everyday Fit',1350)">ADD TO BAG</button>
+            </div>
         </div>
 
-        <div class="info">
-            <strong>Department</strong>
-            <span>Information Technology</span>
+        <div class="product-card" data-category="men">
+            <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=700&q=85" alt="Essential Graphic Tee">
+            <div class="product-info">
+                <h3>Essential Graphic Tee</h3>
+                <p class="category">MEN'S COLLECTION</p>
+                <p class="price">₱1,100</p>
+                <button class="add-button" onclick="addToCart('Essential Graphic Tee',1100)">ADD TO BAG</button>
+            </div>
         </div>
-    </section>
 
-    <section class="card">
-        <h2>Technical Skills</h2>
-        <div class="tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">Basic Python</span>
+        <div class="product-card" data-category="women">
+            <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=700&q=85" alt="Signature Street Look">
+            <div class="product-info">
+                <h3>Signature Street Look</h3>
+                <p class="category">WOMEN'S COLLECTION</p>
+                <p class="price">₱1,600</p>
+                <button class="add-button" onclick="addToCart('Signature Street Look',1600)">ADD TO BAG</button>
+            </div>
         </div>
-    </section>
 
-    <section class="card">
-        <h2>Hobbies & Interests</h2>
-        <div class="tags">
-            <span class="tag">🏀 Basketball</span>
-            <span class="tag">🎮 Online Gaming</span>
+        <div class="product-card" data-category="men">
+            <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=700&q=85" alt="Relaxed Fit Shirt">
+            <div class="product-info">
+                <h3>Relaxed Fit Shirt</h3>
+                <p class="category">MEN'S COLLECTION</p>
+                <p class="price">₱1,250</p>
+                <button class="add-button" onclick="addToCart('Relaxed Fit Shirt',1250)">ADD TO BAG</button>
+            </div>
         </div>
-    </section>
 
-    <footer>
-        © 2026 John Kennery Arteta | Student Portfolio
-    </footer>
+        <div class="product-card" data-category="women">
+            <img
+                src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=85"
+                alt="Classic Wide Leg Pants"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85';"
+            >
+            <div class="product-info">
+                <h3>Classic Wide Leg Pants</h3>
+                <p class="category">WOMEN'S COLLECTION</p>
+                <p class="price">₱1,450</p>
+                <button class="add-button" onclick="addToCart('Classic Wide Leg Pants',1450)">ADD TO BAG</button>
+            </div>
+        </div>
 
+        <div class="product-card" data-category="men">
+            <img
+                src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=700&q=85"
+                alt="Daily Layering Shirt"
+            >
+            <div class="product-info">
+                <h3>Daily Layering Shirt</h3>
+                <p class="category">MEN'S COLLECTION</p>
+                <p class="price">₱1,550</p>
+                <button class="add-button" onclick="addToCart('Daily Layering Shirt',1550)">ADD TO BAG</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="men">
+            <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=700&q=85" alt="Oversized Street Hoodie">
+            <div class="product-info">
+                <h3>Oversized Street Hoodie</h3>
+                <p class="category">MEN'S COLLECTION</p>
+                <p class="price">₱1,850</p>
+                <button class="add-button" onclick="addToCart('Oversized Street Hoodie',1850)">ADD TO BAG</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="women">
+            <img src="https://images.unsplash.com/photo-1543076447-215ad9ba6923?auto=format&fit=crop&w=700&q=85" alt="Urban Denim Jacket">
+            <div class="product-info">
+                <h3>Urban Denim Jacket</h3>
+                <p class="category">WOMEN'S COLLECTION</p>
+                <p class="price">₱1,950</p>
+                <button class="add-button" onclick="addToCart('Urban Denim Jacket',1950)">ADD TO BAG</button>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="men">
+            <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=700&q=85" alt="Urban Casual Outfit">
+            <div class="product-info">
+                <h3>Urban Casual Outfit</h3>
+                <p class="category">MEN'S COLLECTION</p>
+                <p class="price">₱1,750</p>
+                <button class="add-button" onclick="addToCart('Urban Casual Outfit',1750)">ADD TO BAG</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="information" id="information">
+    <h2>STUDENT INFORMATION</h2>
+
+    <div class="info-grid">
+
+        <div class="info-box">
+            <h3>PERSONAL DETAILS</h3>
+            <p><strong>Name:</strong> John Kennery Arteta</p>
+            <p><strong>Age:</strong> 21 Years Old</p>
+            <p><strong>Gender:</strong> Male</p>
+            <p><strong>Civil Status:</strong> Single</p>
+        </div>
+
+        <div class="info-box">
+            <h3>ACADEMIC INFORMATION</h3>
+            <p><strong>Course:</strong> BS Information Technology</p>
+            <p><strong>Year Level:</strong> 3rd Year</p>
+        </div>
+
+        <div class="info-box">
+            <h3>SKILLS</h3>
+            <p>💻 HTML</p>
+            <p>🎨 CSS</p>
+            <p>⚙️ JavaScript</p>
+            <p>🐍 Basic Python</p>
+            <p>🖥️ Web Design</p>
+        </div>
+
+        <div class="info-box">
+            <h3>HOBBIES</h3>
+            <p>🎧 Listening to Music</p>
+            <p>🎬 Watching Movies</p>
+            <p>🏀 Playing Basketball</p>
+        </div>
+
+        <div class="info-box about">
+            <h3>ABOUT THE CREATOR</h3>
+            <p>
+                I am an Information Technology student interested in
+                web development and modern website design.
+                SOLANA GREY CLOTHING is a clothing store website
+                created as part of my learning experience in
+                HTML, CSS, and JavaScript.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 SOLANA GREY CLOTHING | ALL RIGHTS RESERVED
+</footer>
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+<div class="cart-panel" id="cart-panel">
+    <div class="cart-header">
+        <h2>YOUR BAG</h2>
+        <button onclick="closeCart()">×</button>
+    </div>
+
+    <div id="cart-items">
+        <p style="color:#999;font-size:13px;">Your bag is empty.</p>
+    </div>
+
+    <div class="cart-total">
+        Total: ₱<span id="cart-total">0</span>
+    </div>
+
+    <button class="checkout" onclick="checkout()">CHECKOUT</button>
 </div>
+
+<script>
+let cart = [];
+
+function setCategory(category, button) {
+    document.querySelectorAll('.filters button').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    button.classList.add('active');
+
+    document.querySelectorAll('.product-card').forEach(product => {
+        if (category === 'all' || product.dataset.category === category) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+}
+
+function addToCart(name, price) {
+    const existing = cart.find(item => item.name === name);
+
+    if (existing) {
+        existing.quantity++;
+    } else {
+        cart.push({
+            name: name,
+            price: price,
+            quantity: 1
+        });
+    }
+
+    updateCart();
+    openCart();
+}
+
+function updateCart() {
+    const cartItems = document.getElementById('cart-items');
+    const cartCount = document.getElementById('cart-count');
+    const cartTotal = document.getElementById('cart-total');
+
+    cartItems.innerHTML = '';
+
+    let total = 0;
+    let count = 0;
+
+    if (cart.length === 0) {
+        cartItems.innerHTML = '<p style="color:#999;font-size:13px;">Your bag is empty.</p>';
+    }
+
+    cart.forEach((item, index) => {
+        total += item.price * item.quantity;
+        count += item.quantity;
+
+        cartItems.innerHTML += `
+            <div class="cart-item">
+                <div>
+                    <strong>${item.name}</strong><br>
+                    ₱${item.price.toLocaleString()} × ${item.quantity}
+                </div>
+                <button onclick="removeItem(${index})">REMOVE</button>
+            </div>
+        `;
+    });
+
+    cartCount.textContent = count;
+    cartTotal.textContent = total.toLocaleString();
+}
+
+function removeItem(index) {
+    cart.splice(index, 1);
+    updateCart();
+}
+
+function openCart() {
+    document.getElementById('cart-panel').classList.add('open');
+    document.getElementById('overlay').style.display = 'block';
+}
+
+function closeCart() {
+    document.getElementById('cart-panel').classList.remove('open');
+    document.getElementById('overlay').style.display = 'none';
+}
+
+function checkout() {
+    if (cart.length === 0) {
+        alert('Your bag is empty!');
+        return;
+    }
+
+    alert('Thank you for visiting SOLANA GREY CLOTHING! This is a demo checkout only.');
+
+    cart = [];
+    updateCart();
+    closeCart();
+}
+</script>
 
 </body>
 </html>
