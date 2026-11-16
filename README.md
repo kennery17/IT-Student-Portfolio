@@ -1,5 +1,5 @@
 
-# IT STUDENT 
+# IT STUDENT PORTFOLIO
 
 Hi! I am John Kennery Arteta, an Information Technology student.
 
